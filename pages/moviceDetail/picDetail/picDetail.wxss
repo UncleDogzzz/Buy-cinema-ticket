@@ -1,0 +1,5 @@
+/* pages/moviceDetail/picDetail/picDetail.wxss */
+.s-pic{
+    width: 100%;
+    height: 1195rpx;
+}

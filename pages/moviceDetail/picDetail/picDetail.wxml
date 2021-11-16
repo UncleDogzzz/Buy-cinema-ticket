@@ -1,0 +1,12 @@
+<!--pages/moviceDetail/picDetail/picDetail.wxml-->
+<!-- <text>pages/moviceDetail/picDetail/picDetail.wxml</text> -->
+<swiper  style="height: 1250rpx;" duration="2000" bindchange="imageChange" current="{{index}}">
+    <block wx:for="{{imageArray}}" wx:key='index' >
+        <swiper-item>
+            <view>
+                <image class="s-pic" binderror="imgaeOnloadError" src="{{item}}"  ></image>
+            </view>
+        </swiper-item>
+</block>
+</swiper>
+<button type="primary" bindtap="saveImage">保存</button>

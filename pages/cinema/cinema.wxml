@@ -1,0 +1,48 @@
+<!--index.wxml-->
+
+    <view class="flex">
+
+      <view class="box">
+        <picker mode="date" value="{{date}}" bindchange="bindDateChange" fields='day'   class="picker">
+        {{date}}
+  </picker>
+</view>
+
+
+
+
+
+<view class="box">
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" class="picker">
+        {{region[2]}}
+  </picker>
+</view>
+<view class="box">
+        <picker mode="selector" bindchange="bindBrandChange" value="{{index}}" range='{{brand}}' class="picker">
+        {{brand[index]}}
+  </picker>
+</view>
+<view class="box">
+        <picker mode="multiSelector" bindchange="bindSerivceChange" value="{{serviceIndex}}" range='{{service}}' class="picker">
+          {{service[0][serviceIndex[0]]}}，{{service[1][serviceIndex[1]]}}
+  </picker>
+</view>
+</view>
+
+
+<view class="container" wx:if="{{items.length}}">
+  <block wx:for-items="{{items}}" >
+    <view class="flex item" data-id="{{item.id}}" bindtap="ToCinamas">
+      <view class="flex_auto item_left">
+        <view><text class="title">{{item.nm}}</text></view>
+        <view><text class="sub_title">{{item.addr}}</text></view>
+        <view><text class="tag">{{item.promotion.cardPromotionTag}}</text></view>
+      </view>
+      <view class="item_right">
+        <view><text class="price">￥{{item.sellPrice}}起</text></view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view wx:else>没有找到符合要求的电影院哦！</view>

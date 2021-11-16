@@ -1,0 +1,168 @@
+<!-- <view class="container">
+    <view class="title">
+        123
+
+    </view>
+
+
+</view> -->
+<view class="container" style="background-color: {{item.backgroundColor}};">
+
+<!-- 标题栏 -->
+<view class="flex item" data-id="{{item.id}}" bindtap="toMoviceDetail">
+            <view class="item_left">
+                <image src="{{item.img}}"/>
+            </view>
+            <view class="flex_auto item_middle">
+                <view class="view-title"><text class="title">{{item.nm}}</text></view>
+                <view><text class="sub_title">{{item.enm}}</text></view>
+                <view><text class="actor">{{item.cat}}</text></view>
+                <view><text class="actor">{{item.star}}</text></view>
+                <view><text class="actor">{{item.pubDesc}}/{{item.dur}}分钟</text></view>
+            </view>
+            <view class="item_right">
+                <view><text class="action">去买票</text></view>
+            </view>
+        </view>
+
+<!-- 评分 -->
+    <view class="movice_score" >
+        <view >
+            <text class="movice_score_score">评分</text>
+            <text class="wish">{{item.wish}}人想看</text>
+            <text class="watched">{{item.watched}}人看过</text>
+            <text class="watched1">查看评论</text>
+        </view>
+        <view class="left-section">
+            <view class="left-section_left">
+                <text class="score_text">{{item.sc}}</text>
+                <view class="people-grade"><text>{{item.snum}}人评</text></view>
+            </view>
+
+            <view class="left-section_right">
+                <view class="stars-percent-bar">
+                    <view class="stars">
+                        <image src="/image/white-star.png"></image>
+                        <image src="/image/white-star.png"></image>
+                        <image src="/image/white-star.png"></image>
+                        <image src="/image/white-star.png"></image>
+                        <image src="/image/white-star.png"></image>
+                        <view class="bar">
+                            <view class="percent" style="width: {{item.distributions[0].proportion+'%'}};"></view>
+                        </view>
+                    </view>
+                </view>
+
+                <view class="stars-percent-bar">
+                    <view class="stars">
+                        <image src="/image/white-star.png"></image>
+                        <image src="/image/white-star.png"></image>
+                        <image src="/image/white-star.png"></image>
+                        <image src="/image/white-star.png"></image>
+                        <view class="bar">
+                            <view class="percent" style="width: {{item.distributions[1].proportion+'%'}};"></view>
+                        </view>
+                    </view>
+                </view>
+
+                <view class="stars-percent-bar">
+                    <view class="stars">
+                        <image src="/image/white-star.png"></image>
+                        <image src="/image/white-star.png"></image>
+                        <image src="/image/white-star.png"></image>
+                        <view class="bar">
+                            <view class="percent" style="width: {{item.distributions[2].proportion+'%'}};"></view>
+                        </view>
+                    </view>
+                </view>
+
+
+                <view class="stars-percent-bar">
+                    <view class="stars">
+                        <image src="/image/white-star.png"></image>
+                        <image src="/image/white-star.png"></image>
+    
+                        <view class="bar">
+                            <view class="percent" style="width: 1%;" ></view>
+                        </view>
+                    </view>
+                </view>
+
+                <view class="stars-percent-bar">
+                    <view class="stars">
+                        <image src="/image/white-star.png"></image>
+                        <view class="bar">
+                            <view class="percent" style="width: 1%;"></view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        
+        </view>
+
+        <view class="awardBottom">     
+            <view class="awards-box">
+                <view class="show-middle">
+                    <view class="avatars">
+                        <image src="/image/goods.png"></image>
+                        <view class="content"><text class="awardDetail">{{item.scm}}</text></view>
+                    </view>
+                </view>
+            </view>
+
+
+
+        </view>
+
+    </view>
+
+
+<!-- 简介 -->
+    <view class="brief-introduction"> 
+        <view class="title1">
+            <text>简介</text>
+            <!-- <view class="zhankai">展开</view> -->
+        </view>
+        <view class="content1">
+            <text class="normal-line line-clamp">{{item.dra}}</text>
+        </view>
+    </view>
+
+
+
+
+<!-- 视频 -->
+
+<view class="brief-introduction"> 
+        <view class="title1">
+            <text>视频</text>
+            <!-- <view class="zhankai">展开</view> -->
+        </view>
+
+        <view>
+            <video src="{{item.vd}}"></video>
+        </view>
+
+
+    </view>
+
+<!-- 剧照 -->
+<view class="brief-introduction"> 
+        <view class="title1">
+            <text>剧照</text>
+            <!-- <view class="zhankai">展开</view> -->
+        </view>
+
+        <scroll-view scroll-x="true" enable-flex="true" class="swiper-tab"> 
+ <view wx:for="{{tabItemsArray}}" wx:key="*this" class="tab-item" >
+<image src="{{item}}" class="image1" data-index="{{index}}" bindtap="showBigImage"></image>
+</view>
+</scroll-view>
+
+
+    </view>
+
+    </view>
+
+
+    
