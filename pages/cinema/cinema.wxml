@@ -1,6 +1,6 @@
 <!--index.wxml-->
 
-    <view class="flex">
+    <view class="flex1">
 
       <view class="box">
         <picker mode="date" value="{{date}}" bindchange="bindDateChange" fields='day'   class="picker">
@@ -34,9 +34,29 @@
   <block wx:for-items="{{items}}" >
     <view class="flex item" data-id="{{item.id}}" bindtap="ToCinamas">
       <view class="flex_auto item_left">
+
         <view><text class="title">{{item.nm}}</text></view>
-        <view><text class="sub_title">{{item.addr}}</text></view>
-        <view><text class="tag">{{item.promotion.cardPromotionTag}}</text></view>
+        <view class="ttt"><text class="sub_title">{{item.addr}}</text></view>
+        
+
+
+        <view class='feature-tags'>
+      <text wx:if='{{item.endorse || item.tag.endorse}}'>退</text>
+      <text wx:if='{{item.allowRefund || item.tag.allowRefund}}'>改签</text>
+      <text wx:for='{{item.hallType || item.tag.hallType}}' wx:key='{{item}}' class="text1">{{item}}</text>
+      <text class='featrue' wx:if='{{item.snack || item.tag.snack}}'>小吃</text>
+      <text class='featrue' wx:if='{{item.vipDesc ||item.tag.vipTag}}'>{{item.vipDesc ||item.tag.vipTag}}</text>
+    </view>
+
+
+
+
+        <view wx:if="{{item.promotion.cardPromotionTag}}" class="sss">
+          <text class='card'></text>
+        <text class="tag">{{item.promotion.cardPromotionTag}}</text>
+        </view>
+
+
       </view>
       <view class="item_right">
         <view><text class="price">￥{{item.sellPrice}}起</text></view>
@@ -45,4 +65,4 @@
   </block>
 </view>
 
-<view wx:else>没有找到符合要求的电影院哦！</view>
+<view wx:else style="margin-top: 42rpx;">没有找到符合要求的电影院哦！</view>

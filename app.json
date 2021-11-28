@@ -1,10 +1,16 @@
 {
     "pages": [
+        "pages/login/login",
         "pages/home/home",
         "pages/cinema/cinema",
         "pages/my/my",
         "pages/moviceDetail/moviceDetail",
-        "pages/moviceDetail/picDetail/picDetail"
+        "pages/moviceDetail/picDetail/picDetail",
+        "pages/moviceDetail/MovComments/MovComments",
+        "pages/cinema/cinemaDetail/cinemaDetail",
+        "pages/cinema/cinemaSelect/cinemaSelect",
+        "pages/order/order",
+        "pages/order/orderDetail/orderDetail"
     ],
     "window": {
         "backgroundTextStyle": "dark",

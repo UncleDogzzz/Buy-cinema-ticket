@@ -38,11 +38,12 @@
         "minifyWXSS": true,
         "disableUseStrict": false,
         "showES6CompileOption": false,
-        "useCompilerPlugins": false
+        "useCompilerPlugins": false,
+        "minifyWXML": true
     },
     "compileType": "miniprogram",
     "libVersion": "2.20.2",
-    "appid": "wx4270b6d0a923105d",
+    "appid": "wx02ffc31760adca44",
     "projectname": "weipiao",
     "debugOptions": {
         "hidedInDevtools": []

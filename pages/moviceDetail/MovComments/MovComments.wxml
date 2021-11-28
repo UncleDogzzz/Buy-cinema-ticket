@@ -1,0 +1,34 @@
+<!--pages/comment/comment.wxml-->
+<wxs src='../../../filter/filter.wxs' module="filter"></wxs>
+
+<view class="comment">
+  <view class="title">评论:{{total}}</view>
+  <view class="commentInfo" wx:for="{{commentList}}">
+    <view class="avatar">
+      <image src="{{item.avatarUrl}}"></image>
+    </view>
+    <view class="main">
+      <view class="info">
+        <view class="userInfo">
+          <view class="name">{{item.nick}}</view>
+          <view class="time">{{filter.timeage(item.time)}}</view>
+        </view>
+        <view class="likeCount">
+          <image src="../../images/like.png"></image>
+          评分：{{item.score}}
+        </view>
+      </view>
+      <view class="content">
+        {{item.content}}
+      </view>
+      <view class="reply">回复</view>
+      <view class="hr"></view>
+    </view>
+  </view>
+</view>
+
+
+<!-- <view class="send-comment">
+  <input type="text" model:value='{{content}}'></input>
+<button bindtap="addComment">发表</button>
+</view> -->

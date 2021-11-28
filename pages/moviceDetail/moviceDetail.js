@@ -46,7 +46,23 @@ Page({
           url: './picDetail/picDetail?index='+e.currentTarget.dataset.index,
         })
     },
+    toComments(e){
+        console.log(e.currentTarget.dataset.id);
+        wx.navigateTo({
+          url: './MovComments/MovComments?id='+e.currentTarget.dataset.id,
+        })
+    },
+    toBuyTicks(e) {
+        console.log(e);
+        var movieId = e.currentTarget.dataset.info.id;
+        var rt=e.currentTarget.dataset.info.rt;
+        var movieName=e.currentTarget.dataset.info.nm;
+        wx.navigateTo({
+          url:`../cinema/cinemaSelect/cinemaSelect?movieId=${movieId}&rt=${rt}&movieName=${movieName}`
+        })
+      },
     /**
+     * 
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {

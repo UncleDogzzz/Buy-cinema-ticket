@@ -1,0 +1,27 @@
+
+<view>
+<view wx:if="{{order.length!=0}}">
+<block  wx:for="{{order}}">
+<view>
+    电影院: {{item.cinameName}}
+</view>
+<view>
+    电影: {{item.moviceName}}
+</view>
+<view>
+    座位:{{item.seat}}
+</view>
+<view>
+    时间: {{item.time}}
+</view>
+<view>
+    票价: {{item.price}}
+</view>
+
+{{ss}} 
+</block>
+</view>
+
+<view wx:else>你还暂时没有订单哦！</view>
+</view>
+

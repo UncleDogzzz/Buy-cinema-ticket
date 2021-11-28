@@ -1,7 +1,16 @@
+.tabbar{
+  position: fixed;
+  font-size: 26rpx;
+  z-index: 999;
+  top: 0rpx;
+  width: 100%;
+  background-color: #f2f2f2;
+  height: 140rpx;
+}
+
 .container {
   /* background-color: #F2f2f2; */
-  margin-top: 42rpx;
-
+  margin-top: 140rpx;
 }
 
 .item {
@@ -70,10 +79,9 @@
   /* width: 220px; */
 }
 .flex{
-  font-size: 26rpx;
   color: #777777;
   display: flex;
-  top: 100rpx;
+  font-size: 26rpx;
   justify-content:space-around
 }
 .flex1{
@@ -84,13 +92,7 @@
  z-index: 999;
   color: #777777;
   display: flex;
-  justify-content:space-around;
-  background-color: #f2f2f2;
-  height: 41rpx;
-}
-.box{
-  margin-right: 33rpx;
-  white-space:nowrap;
+  justify-content:space-around
 }
 .feature-tags {
   width: 80%;
@@ -126,4 +128,28 @@
 }
 .sss{
   margin-top: 10rpx;
+}
+.timeline {
+  height: 90rpx;
+  border-bottom: 1px solid #e6e6e6;
+}
+/* 设置了externalClasses 不起作用 */
+.scroll-view_H {
+  white-space: nowrap;
+  width: 100%;
+}
+.day {
+  display: inline-block;
+  height: 90rpx;
+  width: 30%;
+  line-height: 90rpx;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 10rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.day.active {
+  color: #ef4238;
+  border-bottom: 2px solid #ef4238;
 }

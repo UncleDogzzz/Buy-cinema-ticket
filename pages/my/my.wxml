@@ -5,6 +5,6 @@
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="info">
-    <text>{{source}}</text>
+    <button bindtap="toOrderDetail">订单</button>
   </view>
 </view>

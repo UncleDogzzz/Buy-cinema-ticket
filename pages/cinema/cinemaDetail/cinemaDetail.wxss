@@ -1,0 +1,398 @@
+.cinema-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30rpx;
+    padding-right: 0;
+    background: #fff;
+  }
+  
+  .cinema-info .info-box {
+    width: 520rpx;
+  }
+  
+  .cinema-info .title {
+    font-size: 30rpx;
+    line-height: 48rpx;
+    color: #333;
+  }
+  
+  .cinema-info .location {
+    margin-top: 2px;
+    font-size: 28rpx;
+    line-height: 37rpx;
+    color: #999;
+  }
+  
+  .cinema-info .location-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 140rpx;
+    height: 75rpx;
+    border-left: 1px solid #d8d8d8;
+    text-align: center;
+  }
+  
+  .cinema-info .location-icon image {
+    width: 36rpx;
+    height: 39rpx;
+    margin-bottom: 10rpx;
+  }
+  .cinema-info .location-icon view{
+    font-size: 24rpx;
+    color: #999;
+  }
+
+  .movie-info {
+    padding: 22rpx 30rpx;
+    text-align: center;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  
+  .grade {
+    color: #ffb400;
+    font-size: 32rpx;
+  }
+  
+  .small {
+    font-size: 20rpx;
+  }
+  
+  .movie-desc {
+    height: 37rpx;
+    margin-top: 2px;
+    line-height: 37rpx;
+    font-size: 26rpx;
+    color: #999;
+  }
+  
+  .no-seat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 460rpx;
+  }
+  
+  .no-seat image {
+    width: 155rpx;
+    height: 143rpx;
+  }
+  
+  .no-seat text {
+    margin-top: 24rpx;
+    line-height: 1;
+    font-size: 32rpx;
+    color: #acacac;
+  }
+  
+  .item {
+    display: flex;
+    height: 84rpx;
+    padding: 30rpx 30rpx 30rpx 0;
+    margin: 0 0 0 30rpx;
+    border-bottom: 1px solid #e6e6e6;
+    color: #333;
+  }
+  
+  .item:last-child {
+    border: none;
+  }
+  
+  .box {
+    display: flex;
+    height: 94rpx;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .begin {
+    line-height: 1;
+    font-size: 40rpx;
+    color: #333;
+    white-space: nowrap;
+  }
+  
+  .end {
+    margin-left: 1px;
+    color: #999;
+    font-size: 22rpx;
+    white-space: nowrap;
+  }
+  
+  .info-block {
+    margin-left: 34rpx;
+    width: 180rpx;
+    overflow-x: hidden;
+    height: 94rpx;
+  }
+  
+  .lan {
+    margin-top: 1px;
+    font-size: 26rpx;
+    color: #333;
+  }
+  
+  .hall {
+    font-size: 22rpx;
+    color: #999;
+  }
+  
+  .price {
+    /* flex: 0 1 auto; */
+    width: 260rpx;
+    margin-left: 20rpx;
+  }
+  
+  .price-box {
+    display: flex;
+    /* flex-wrap: wrap; */
+    height: 40rpx;
+    align-items: flex-end;
+  }
+  
+  .sellPr {
+    line-height: 1;
+    color: #f03d37;
+    margin-top: 1px;
+    font-size: 38rpx;
+    margin-right: 10rpx;
+  }
+  
+  .d {
+    font-size: 22rpx;
+  }
+  
+  .vipPrice {
+    height: 25rpx;
+    line-height: 25rpx;
+    margin-top: 1px;
+    border: 1px solid #ff9000;
+    border-radius: 2px;
+    font-size: 22rpx;
+  }
+  
+  .vipPrice .icon {
+    display: inline-block;
+    font-size: 22rpx;
+    padding: 0 2px;
+    color: #fff;
+    background-color: #f90;
+  }
+  
+  .vipPrice .num {
+    display: inline-block;
+    font-size: 22rpx;
+    padding: 0 2px;
+    color: #f90;
+    background-color: #fff;
+  }
+  
+  .discount {
+    color: #999;
+    font-size: 22rpx;
+  }
+  
+  .button-block {
+    display: flex;
+    align-items: center;
+    margin-left: 34rpx;
+  }
+  
+  .button {
+    width: 90rpx;
+    height: 54rpx;
+    line-height: 54rpx;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #f03d37;
+    color: #fff;
+    border-radius: 8rpx;
+    white-space: nowrap;
+    font-size: 24rpx;
+    border: none;
+  }
+  
+  .tuan-list {
+    padding-left: 30rpx;
+    border-top: 20rpx solid #f5f5f5;
+  }
+  
+  .tuan-list .title {
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 30rpx;
+    color: #999;
+  }
+  
+  .snack-item {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #e6e6e6;
+    padding: 26rpx 30rpx 26rpx 0;
+  }
+  
+  .snack-item image {
+    width: 160rpx;
+    height: 160rpx;
+    margin-right: 20rpx;
+  }
+  
+  .snack-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  
+  .first-title {
+    font-size: 30rpx;
+    color: #666;
+  }
+  
+  .second-title {
+    width: 90%;
+    font-size: 24rpx;
+    color: #999;
+  }
+  
+  .snack-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #999;
+  }
+  
+  .num {
+    font-size: 30rpx;
+    color: #f03d37;
+  }
+  
+  .rmb {
+    color: #f03d37;
+  }
+  
+  .font {
+    font-size: 24rpx;
+  }
+  .timeline {
+    height: 90rpx;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .scroll-view_H {
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .tabbar{
+
+    font-size: 26rpx;
+    z-index: 999;
+    top: 0rpx;
+    width: 100%;
+    background-color: #ffffff;
+    /* height: 140rpx; */
+  }
+  .day {
+    display: inline-block;
+    height: 90rpx;
+    width: 30%;
+    line-height: 90rpx;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 10rpx;
+    font-size: 28rpx;
+    color: #333;
+  }
+  .day.active {
+    color: #ef4238;
+    border-bottom: 2px solid #ef4238;
+  }
+  
+
+
+
+
+
+  .swiper-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .post-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    -webkit-filter: blur(30px);
+    filter: blur(30px);
+    background-position-y: 40%;
+  }
+  
+  .post-bg-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #40454d;
+    opacity: 0.55;
+  }
+  
+  .scroll-view_H {
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .movie-item {
+    display: inline-block;
+    width: 156rpx;
+    height: 228rpx;
+    margin: 50rpx 0 40rpx 40rpx;
+  }
+  .movie-item:first-child{
+    margin-left: calc(50vw - 78rpx);
+  }
+  .movie-item:last-child{
+    margin-right: calc(50vw - 78rpx);
+  }
+  
+  .movie-item .post {
+    width: 156rpx;
+    height: 228rpx;
+    transition: transform .3s;
+  }
+  
+  .movie-item .post.select {
+    position: relative;
+    transform: scale(1.15);
+    border: 2px solid #fff;
+  }
+  
+  .movie-item .post.select::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20rpx;
+    height: 10rpx;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjMwODIyNEEwNTkwRDExRTZBNkMwOTE1NDA0RjA5MDA3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjMwODIyNEExNTkwRDExRTZBNkMwOTE1NDA0RjA5MDA3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MzA4MjI0OUU1OTBEMTFFNkE2QzA5MTU0MDRGMDkwMDciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MzA4MjI0OUY1OTBEMTFFNkE2QzA5MTU0MDRGMDkwMDciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7kjYk3AAAAVUlEQVR42qzMMQ7AIAwEwSvy8P25EwokZNkYCFcgCu/IzLB7Q9+jS2gz1MG/KN0ZwVOU0fDgLorvI3AVJWozsELJuhmYocyaCvQo1f2jeiT/cK8AAwBzvH2t7aaajQAAAABJRU5ErkJggg==');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .movie-item image {
+    width: 100%;
+    height: 100%;
+  }
+  

@@ -1,0 +1,2 @@
+<button bindtap="getUser">获取信息</button>
+<button bindtap="Login">开启买票</button>

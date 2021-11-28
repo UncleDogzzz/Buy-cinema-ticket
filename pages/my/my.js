@@ -23,7 +23,11 @@ Page( {
       })
     })
   },
-
+  toOrderDetail(){
+    wx.navigateTo({
+      url: '../order/orderDetail/orderDetail',
+    })
+  },
   onReady: function () {
     wx.setNavigationBarTitle({
       title: '我的'

@@ -20,7 +20,7 @@
                 <view><text class="actor">{{item.star}}</text></view>
                 <view><text class="actor">{{item.pubDesc}}/{{item.dur}}分钟</text></view>
             </view>
-            <view class="item_right">
+            <view class="item_right" catchtap="toBuyTicks" data-info='{{item}}'>
                 <view><text class="action">去买票</text></view>
             </view>
         </view>
@@ -31,14 +31,14 @@
             <text class="movice_score_score">评分</text>
             <text class="wish">{{item.wish}}人想看</text>
             <text class="watched">{{item.watched}}人看过</text>
-            <text class="watched1">查看评论</text>
+            <text class="watched1" data-id="{{item.id}}" bindtap="toComments">查看评论</text>
         </view>
         <view class="left-section">
             <view class="left-section_left">
                 <text class="score_text">{{item.sc}}</text>
                 <view class="people-grade"><text>{{item.snum}}人评</text></view>
             </view>
-
+ 
             <view class="left-section_right">
                 <view class="stars-percent-bar">
                     <view class="stars">

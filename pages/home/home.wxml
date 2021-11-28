@@ -12,8 +12,8 @@
 
 
     <view>
-        <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
-                autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
+        <swiper class="swiper_box" indicator-dots="true" 
+                autoplay="autoplay" interval="3000" duration="1200" bindchange="swiperchange">
             <block wx:for-items="{{items}}">
                 <swiper-item>
                     <image src="{{item.img}}" class="slide-image" data-id="{{item.id}}" bindtap="toMoviceDetail" />
@@ -39,8 +39,9 @@
             </view>
             <view class="item_right">
                 <view><text class="score">{{item.sc}}.分</text></view>
-                <view catchtap="toBuyTicks"><text class="action">{{item.showStateButton.content}}</text></view>
+                <view catchtap="toBuyTicks" data-info='{{item}}' ><text class="action">{{item.showStateButton.content}}</text></view>
             </view>
         </view>
     </block>
-</view>
+</view> 
+ 

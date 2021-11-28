@@ -3,11 +3,6 @@
 var app = getApp()
 Page({
   data: {
-    indicatorDots: true,
-    vertical: false,
-    autoplay: true,
-    interval: 3000,
-    duration: 1200,
     region: ['广东省', '广州市', '从化区'], //城市选择器
     cityId: 20, //城市ID
     items: '', //电影列表
@@ -91,6 +86,7 @@ Page({
 
   onLoad: function () {
     console.log('onLoad')
+    console.log(app.globalData.userInfo)
     this.getMoviceByCity();
     var that = this
     //调用应用实例的方法获取全局数据
@@ -101,38 +97,16 @@ Page({
       })
     })
 
-    // playingList
-    // wx.request({
-    //   url: 'http://json.bmbstack.com/playingList',
-    //   method: 'GET',
-    //   data: {},
-    //   header: {
-    //     'Accept': 'application/json'
-    //   },
-    //   success: function(res) {
-    //     console.log(res.data)
-    //     that.data.items = res.data
-    //   }
-    // })
-
-    // //bannerList
-    // wx.request({
-    //   url: 'http://json.bmbstack.com/bannerList',
-    //   method: 'GET',
-    //   data: {}, 
-    //   header: {
-    //     'Accept': 'application/json'
-    //   },
-    //   success: function(res) {
-    //     console.log(res.data)
-    //     that.data.images = res.data
-    //   }
-    // })
+   
 
   },
-  go: function (event) {
+  toBuyTicks(e) {
+    console.log(e);
+    var movieId = e.currentTarget.dataset.info.id;
+    var rt=e.currentTarget.dataset.info.rt;
+    var movieName=e.currentTarget.dataset.info.nm;
     wx.navigateTo({
-      url: '../list/index?type=' + event.currentTarget.dataset.type
+      url:`../cinema/cinemaSelect/cinemaSelect?movieId=${movieId}&rt=${rt}&movieName=${movieName}`
     })
   }
 })

@@ -1,0 +1,73 @@
+<!--index.wxml-->
+
+<!-- 日期 -->
+<view class="tabbar">
+<view>
+  <scroll-view class='timeline scroll-view_H' scroll-x>
+    <view class='day {{index===selectIndex?"active":""}}'  wx:for="{{days}}" data-index="{{index}}" data-date='{{item}}' bindtap="bindDateChange">{{item}}</view>
+
+  </scroll-view>
+</view>
+
+
+
+
+<!-- 筛选 -->
+<view class="flex">
+<view class="box">
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" class="picker">
+  {{region[2]}}
+</picker>
+</view>
+
+<view class="box">
+  <picker mode="selector" bindchange="bindBrandChange" value="{{index}}" range='{{brand}}' class="picker">
+  {{brand[index]}}
+</picker>
+</view>
+<view class="box">
+  <picker mode="multiSelector" bindchange="bindSerivceChange" value="{{serviceIndex}}" range='{{service}}' class="picker">
+    {{service[0][serviceIndex[0]]}}，{{service[1][serviceIndex[1]]}}
+</picker>
+</view>
+</view>
+</view>
+
+
+<!-- 内容 -->
+<view class="container" wx:if="{{items.length}}">
+<block wx:for-items="{{items}}" >
+<view class="flex item" data-id="{{item.id}}" bindtap="ToCinamas">
+<view class="flex_auto item_left">
+
+  <view><text class="title">{{item.nm}}</text></view>
+  <view class="ttt"><text class="sub_title">{{item.addr}}</text></view>
+  
+
+
+  <view class='feature-tags'>
+<text wx:if='{{item.endorse || item.tag.endorse}}'>退</text>
+<text wx:if='{{item.allowRefund || item.tag.allowRefund}}'>改签</text>
+<text wx:for='{{item.hallType || item.tag.hallType}}' wx:key='{{item}}' class="text1">{{item}}</text>
+<text class='featrue' wx:if='{{item.snack || item.tag.snack}}'>小吃</text>
+<text class='featrue' wx:if='{{item.vipDesc ||item.tag.vipTag}}'>{{item.vipDesc ||item.tag.vipTag}}</text>
+</view>
+
+
+
+
+  <view wx:if="{{item.promotion.cardPromotionTag}}" class="sss">
+    <text class='card'></text>
+  <text class="tag">{{item.promotion.cardPromotionTag}}</text>
+  </view>
+
+
+</view>
+<view class="item_right">
+  <view><text class="price">￥{{item.sellPrice}}起</text></view>
+</view>
+</view>
+</block>
+</view>
+
+<view wx:else style="margin-top: 142rpx;">没有找到符合要求的电影院哦！</view>

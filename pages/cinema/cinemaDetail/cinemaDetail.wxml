@@ -1,0 +1,124 @@
+<!-- 地图 -->
+<view class='cinema-info'>
+    <view class='info-box'>
+      <view class='title line-ellipsis'>{{cinemaData.nm}}</view>
+      <view class='location'>{{cinemaData.addr}}</view>
+    </view>
+    <view  class='location-icon' >
+      <image src='/image/location.png' mode='aspectFit'></image>
+      <view>地图</view>
+    </view>
+  </view>
+
+
+
+  <view class='swiper-container'>
+  <view class='post-bg' style='background-image:url({{movie.img}})'>213</view>
+  <view class='post-bg-mask'></view>
+  <scroll-view class='swiper-wrapper scroll-view_H' scroll-x scroll-with-animation scroll-left='{{scrollLeft}}'>
+    <view class='movie-item' wx:for='{{movies}}' wx:key='{{item.id}}' data-movie='{{item}}' bindtap='selectMovie' id='item{{index}}' data-index="{{index}}">
+      <view class='post {{index==select?"select":""}}'>
+        <image src='{{item.img}}'></image>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 标题 -->
+  <view>
+    <view class='movie-info' wx:if='{{movie}}'>         
+      <view class='movie-title line-ellipsis'>
+        <text class='title'>{{movie.nm}} </text>
+        <text class='grade'>
+          <text wx:if='{{!movie.globalReleased}}'>{{movie.wish}}<text class='small'>人想看</text></text>
+        <text wx:elif='{{movie.sc!=="0.0"}}'>{{movie.sc}}<text class='small'>分</text></text>
+        <text wx:else><text class='small'>暂无评分</text></text>
+        </text>
+      </view>
+      <view class='movie-desc line-ellipsis'>{{movie.desc}}</view>
+    </view>
+  </view>
+
+<!-- 时间 -->
+<view class="tabbar">
+<view>
+  <scroll-view class='timeline scroll-view_H' scroll-x='true'>
+    <view class='day {{index===selectIndex?"active":""}}'  wx:for="{{days}}" data-index="{{index}}" data-date='{{item}}' bindtap="bindDateChange">{{item}}</view>
+  </scroll-view>
+</view>
+</view>
+
+
+<view>
+    <view wx:if='{{timeList.length}}'>
+      <view class='time' wx:for='{{timeList}}' wx:key='{{item.tm}}' class='item' bindtap='tobuyTicket' data-info='{{item}}'>
+        <view class='time-block box'>
+          <view class='begin'>{{item.tm}}</view>
+          <view class='end'>{{item.endTime}} 散场</view>
+        </view>
+        <view class='info-block box'>
+          <view class="lan line-ellipsis">{{item.lang}} {{item.tp}}</view>
+          <view class="hall line-ellipsis">{{item.th}}</view>
+        </view>
+        <view class='price box'>
+          <view class='price-box line-ellipsis'>
+            <view class="sellPr">
+              <text class="stonefont">{{ (item.vipPrice && item.vipPrice*1+10) || 37 }}</text>
+              <text class="d">元</text>
+            </view>
+            <view class="vipPrice" wx:if='{{item.vipPriceName || item.vipPriceNameNew}}'>
+              <text class="icon">{{item.vipPriceName || item.vipPriceNameNew}}</text>
+              <text class="num">{{item.vipPrice}}</text>
+            </view>
+          </view>
+          <view class='discount line-ellipsis' wx:if='{{item.extraDesc}}'>{{item.extraDesc}}</view>
+        </view>
+        <view class='button-block'>
+          <view class='button'>购票</view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class='no-seat'>
+        <text wx:if="{{!success}}">此电影院无该电影档期</text>
+      <text wx:elif='{{movie.globalReleased}}'>今日场次已映完</text>
+      <text wx:else>影片未上映</text>
+    </view>
+  </view>
+
+  <view class='tuan-list' wx:if='{{divideDealList.length}}'>
+    <view class='title'>热销小吃</view>
+    <view class='tuan-item' wx:for='{{divideDealList}}' wx:key='{{item.title}}'>
+      <view wx:for='{{item.dealList}}' wx:for-item="i" wx:key='{{i}}' class='snack-item' bindtap='goSnackPage' data-info='{{i}}'>
+        <view>
+          <image src='{{i.imageUrl}}'></image>
+        </view>
+        <view class='snack-info'>
+          <view class='first-title'>{{i.firstTitle}}</view>
+          <view class='second-title line-ellipsis'>{{i.secondTitle}}</view>
+          <view class='snack-price'>
+            <view>
+              <text class='num'>{{i.price}}</text>
+              <text class='rmb'>元</text>
+              <text class='font'> 影院价:{{i.value}}元</text>
+            </view>
+            <view class='font'>{{i.curNumberDesc}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
