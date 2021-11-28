@@ -1,5 +1,6 @@
 # Buy-cinema-ticket
 微信在线购票小程序，使用猫眼API，展示最近上映电影、附近电影院以及档期表。
+
 使用猫眼API
 获取城市ID：https://openapi.meituan.com/poi/city
 获取最近上映电影：https://m.maoyan.com/ajax/movieOnInfoList?ci=cityId
